@@ -26,6 +26,8 @@ app.post('/webhook', async (req, res) => {
     case 'verStatus':
       resposta = Model.verStatus( mensagem, parametros );
       break;
+    case 'bemVindo':
+      resposta = "Seja muito bem vindo ao webhook"
     default: 
       resposta = {tipo: 'texto', mensagem: 'Sinto muito, não entendi o que você quer'}
   }
